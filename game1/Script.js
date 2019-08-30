@@ -121,7 +121,7 @@ window.onload = function () {
 			}
 
 			//現在のテキスト表示
-			S_Text.text = "倒した数：" + Point; 				//Point変数が変化するので、毎フレームごとにPointの値を読み込んだ文章を表示する
+			S_Text.text = "捕獲した数：" + Point; 				//Point変数が変化するので、毎フレームごとにPointの値を読み込んだ文章を表示する
 
 			//ゲームオーバー判定
 			if (Zoyama.x >= 400) {						//画面端にぞう山画像が行ってしまったら
@@ -129,7 +129,7 @@ window.onload = function () {
 				game.pushScene(S_END);				//S_ENDシーンを読み込ませる
 
 				//ゲームオーバー後のテキスト表示
-				S_GameOverText.text = "GAMEOVER 記録：" + Point + "体";				//テキストに文字表示 
+				S_GameOverText.text = "GAMEOVER 記録：" + Point + "体捕獲した";				//テキストに文字表示 
 			}
 
 		};
@@ -172,7 +172,7 @@ window.onload = function () {
 		S_Tweet.ontouchend = function () {				//S_Tweetボタンをタッチした（タッチして離した）時にこの中の内容を実行する
 			//ツイートＡＰＩに送信
 
-			window.open("http://twitter.com/intent/tweet?text=何とか" + Point + "体倒した&hashtags=ahoge&url=" + url); //ハッシュタグにahogeタグ付くようにした。
+			window.open("http://twitter.com/intent/tweet?text=何とか" + Point + "体捕獲した&hashtags=ahoge&url=" + url); //ハッシュタグにahogeタグ付くようにした。
 		};
 
 	};
